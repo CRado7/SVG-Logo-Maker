@@ -19,6 +19,9 @@ Run "npm i" in your command line to install the necessry decpendancies.
 ## Usage
 This is a CLI Application. All depenedancies will need to be intalled using "npm i" in your command line. Once you have successfully installed all dependancies, you will enter "node index.js" in your command line to start the application.
 
+Go to the GitHub Repository <a href="https://github.com/CRado7/SVG-Logo-Maker">here</a>.
+<br>
+See examples here
 ## Credits
 ![badmath](https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)
 <br>
