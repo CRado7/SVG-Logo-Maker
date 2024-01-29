@@ -1,6 +1,6 @@
 //Imports
-const inquirer = require('inquirer');
-const fs = require('fs');
+const inquirer = require ('inquirer');
+const fs = require ('fs');
 const { Triangle, Circle, Square } = require('./lib/shapes');
 
 function logoMaker() {
@@ -37,28 +37,31 @@ function logoMaker() {
         }
 
         if (options.shape === 'Triangle') {
-            Triangle = new Triangle(options.text, options.textColor, options.shapeColor)
-            fs.writeFile('./examples/newTriangleLogo.svg', Triangle.render(), (err) => {
+            const triangle = new Triangle(options.text, options.textColor, options.shapeColor)
+            fs.writeFile('./examples/newTriangleLogo.svg', triangle.render(), (err) => {
                 if (err) {
                     console.error(err);
                 }
             })
         } else if (options.shape === 'Circle') {
-            Circle = new Circle(options.text, options.textColor, options.shapeColor)
-            fs.writeFile('./examples/newCircleLogo.svg', Circle.render(), (err) => {
+            const circle = new Circle(options.text, options.textColor, options.shapeColor)
+            fs.writeFile('./examples/newCircleLogo.svg', circle.render(), (err) => {
                 if (err) {
                     console.error(err);
                 }
             })
         } else {
-            Square = new Square(options.text, options.textColor, options.shapeColor)
-            fs.writeFile('./examples/newSquareLogo.svg', Square.render(), (err) => {
+            const square = new Square(options.text, options.textColor, options.shapeColor)
+            fs.writeFile('./examples/newSquareLogo.svg', square.render(), (err) => {
                 if (err) {
                     console.error(err);
                 }
             })
         }
-    });
+    })
+    .then(() => {
+        console.log('You have successfully made a logo!')
+    })
 }
 
 logoMaker();
