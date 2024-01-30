@@ -20,7 +20,7 @@ function logoMaker() {
         {
             type: 'list',
             name: 'shape',
-            message: 'Choose a shape forf your logo',
+            message: 'Choose a shape for your logo',
             choices: ['Triangle', 'Circle', 'Square'],
         },
 
